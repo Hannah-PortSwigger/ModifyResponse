@@ -30,7 +30,7 @@ class BurpExtender(IBurpExtender, IProxyListener, IHttpListener, IHttpService):
         replacement = "<head><script>alert(1)</script>"
 
         # check if it's a response
-        if (messageIsRequest == False):
+        if (!messageIsRequest):
             # retrieve IHttpRequestResponse object
             httpRequestResponse = message.getMessageInfo()
             # determine the host
